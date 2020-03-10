@@ -1,0 +1,85 @@
+
+body {
+background="background.jpg";
+    background-repeat: no-repeat;
+font-family: Arial, Oldstyle, Verdana,
+sans-serif;
+line-height: 1.5;
+}
+
+
+.container {
+margin: 0 auto;
+width: 900px;
+}
+
+article {
+background-color: #FFF;
+border: 1px solid #CCC;
+border-color: #151515 #151515 #151515 #151515;
+margin-bottom: 20px;
+padding: 10px; /* espaçamento entre a borda e o título */
+}
+
+
+article h2 {
+border-bottom: 1px dashed #7E9F19;
+margin: 0;
+}
+
+article img {
+border: 1px solid #7E9F19;
+float: left;
+margin: 10px 10px 0 0;
+padding: 2px;
+width: 160px;
+height: 160px;
+}
+
+article a { /* mudando a cor dos links para negrito */
+color: #2C88A7;
+font-weight: bold;
+margin: 0px 0px 200px 40%;
+}
+
+header h1 a {
+color: #000;
+text-decoration: none;
+margin-left:50%;
+}
+
+header h1 a:hover { /* mudando a cor do link quando posicionado */
+background-color: #7E9F19;
+color: #FFF;
+}
+
+.clear { /* para a imagem nao "ficar fora" quando usa o float */
+clear: both;
+}
+
+footer {
+font-size: 12px;
+text-align: center;
+}
+
+section { /* para a barra lateral lista e titulo */
+float: left;
+width: 660px;
+}
+
+aside {
+padding: 10px; /*tamanho do bloco*/
+float: right;
+width: 200px;
+}
+
+aside h3 {
+font-size: 18px;
+margin-top: 0;
+}
+
+aside ol {
+font-size: 14px;
+}
+
+
