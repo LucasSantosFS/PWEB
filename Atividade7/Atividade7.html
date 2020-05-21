@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <title>Objetos</title>
+</head>
+<body>
+<script>
+
+
+function area(x, y){
+    this.x = x;
+    this.y = y;
+    
+    var result;
+    
+    this.calc = function(){
+    
+    result = x * y;
+    
+    return result;
+    }     
+}
+
+
+var calcArea = new area(10, 15);
+
+alert("Area do retângulo: " + calcArea.calc() + "m³");
+
+
+function conta (){
+    var Nome;
+    var Conta;
+    var Banco;
+    var Saldo;
+    
+    
+    this.setNome=function(vNome){
+        this.Nome=vNome;
+    }
+    
+    
+    this.setConta=function(vConta){
+        this.Conta=vConta;
+    }
+    
+    this.setBanco=function(vBanco){
+        this.Banco=vBanco;
+    }
+    
+    this.setSaldo=function(vSaldo){
+        this.Saldo=vSaldo;
+    }
+    
+    this.getNome=function(){
+        return this.Nome;
+    }
+    
+    this.getConta=function(){
+        return this.Conta;
+    }
+    
+    this.getBanco=function(){
+        return this.Banco;
+    }
+    
+    this.getSaldo=function(){
+        return this.Saldo;
+    }
+    
+
+    
+}
+    
+function contaCorrente(){
+    var chequeEspecial = 1500;
+    var dataVencimento = '03/02/2020';
+    var Especial;
+    
+    this.setEspecial=function(vEspecial){
+        this.Especial=vEspecial;
+    }
+    
+    this.getEspecial=function(){
+        return this.Especial;
+    } 
+    
+}
+
+function contaPoupanca(){
+    var juros = 0.1;
+    var dataVencimento = '03/02/2020';
+    
+    this.setJuros=function(vJuros){
+        this.juros=vJuros;
+    }
+    
+    this.getJuros=function(){
+        return this.juros;
+    } 
+}
+    
+contaCorrente.prototype = new conta();
+contaPoupanca.prototype = new conta();
+    
+nContaCorrente = new contaCorrente();
+nContaPoupanca = new contaPoupanca();
+    
+nContaCorrente.setNome('Lucas');
+nContaCorrente.setBanco('Itau');
+nContaCorrente.setConta('123139');
+nContaCorrente.setSaldo(15000);
+nContaCorrente.setEspecial(1000);
+    
+nContaPoupanca.setNome('Eduardo');
+nContaPoupanca.setBanco('Itau');
+nContaPoupanca.setConta('123134');
+nContaPoupanca.setSaldo(15000);
+nContaPoupanca.setJuros(0.1);
+
+alert("Dados conta1: " + '\n' + 'Nome:' + nContaCorrente.getNome() + '\n' + 'Banco: ' + nContaCorrente.getBanco() + '\n' + 'Conta: ' + nContaCorrente.getConta() + '\n' + 'Saldo: ' + nContaCorrente.getSaldo() + '\n' + 'Cheque Especial: ' + nContaCorrente.getEspecial());
+    
+alert("Dados conta2: " + '\n' + 'Nome:' + nContaPoupanca.getNome() + '\n' + 'Banco: ' + nContaPoupanca.getBanco() + '\n' + 'Conta: ' + nContaPoupanca.getConta() + '\n' + 'Saldo: ' + nContaPoupanca.getSaldo() + '\n' + 'Juros: ' + nContaPoupanca.getJuros());
+
+
+
+</script>
+</body>
+</html>
