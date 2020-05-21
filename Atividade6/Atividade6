@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <title>jsAluno</title>
+</head>
+<body>
+<script>
+
+var aluno1 = {
+        name : "Lucas“,
+        ra: 1234
+};
+
+console.log(aluno1);
+
+var aluno2 = {};
+aluno2.ra = '2244';
+aluno2.nome = 'Henrique';
+
+console.log(aluno2);
+
+
+var aluno3 = new Object();
+aluno3.ra = '3212'
+aluno3.nome = 'Carlos';
+
+console.log(aluno3);
+
+</script>
+</body>
+</html>
