@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Transformador de texto pra maiusculo supremo</h3>
+
+<input type="text" id="myText" value="Qualquer texto...">
+
+<p>Transforma o texto em maisculo!</p>
+
+<button onclick="myFunction()">Transformar</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    
+  var x = document.getElementById("myText").value;
+  var x = x.toUpperCase();
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
