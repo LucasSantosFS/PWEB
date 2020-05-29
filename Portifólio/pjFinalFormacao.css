@@ -1,0 +1,63 @@
+1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    /*tamanho da bardo*/
+    padding-top: 35px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-image: url(h1test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 36px;
+    text-shadow: 30px, 30px, 30px, white;
+}
+
+body{
+   /* background-image: url(h1test.jpg); */
+    background-attachment: fixed;
+    margin: 0;
+    background-color: darkgray;
+}
+
+.topicos li {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 10px;
+    background: #000000;
+    background: rgba(0,0,0, 0.2);
+    margin-top: 0;
+    
+}
+
+.topicos a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    display: block;
+    
+    
+}
+
+.topicos ul {
+    background-image: url(h1test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    margin-top: 0;
+    margin-left: -40px;
+    padding-bottom: 30px;
+}
+
+.rodape {
+    margin: auto;
+}
+
+.rodape {
+    
+}
