@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<form name="form1">
+  <fieldset>
+    <h1>Formulário Principal</h1>  
+      
+    Nome:<br><input type="text" id="name" name="name"><br>
+    Email:<br><input type="email" id="email" name="email"><br>
+    Comentário:<br><textarea name="comment" form="form1" id="comment">Digite aqui...</textarea><br>
+    <br>
+    <h2>Pesquisa</h2>
+    <label for="checkbox">Primeira vez nessa página?</label><br><br>
+      
+    <input type="radio" id="rdb1" name="rdb1" onclick="desm2()">Sim
+    <input type="radio" id="rdb2" name="rdb2" onclick="desm1()">Não<br>
+    <input type="submit" value="Enviar" onclick="validar()">
+    <input type="submit" value="Limpar" onclick="limpar()">
+  </fieldset>
+</form>
+
+
+
+<script>
+  document.getElementById('rdb1').checked = true;
+  function validar() {
+      var name = document.form1.elements[1].value;
+      var email = document.form1.elements[2].value;
+      var comentario = document.getElementById('comment').value;
+      if (name.length < 10){
+        alert("Nome pequeno!" + '\n' + 'Minimo 10 caracteres');
+        return;
+      }
+      
+      if (!email.includes("@", 0) && !email.includes('.', 0)){
+        alert('Email inválido!');
+        return;
+      }
+      
+      if (comentario.length < 20){
+        alert('Comentário muito pequeno!');
+        return;
+      }
+
+      if(document.getElementById('rdb1').checked == true){
+        alert('Bem vindo de volta!');
+      }else{
+        alert('Volte sempre!');
+      }
+  }
+
+  function desm1(){
+    document.getElementById('rdb1').checked = false;
+  }
+
+  function desm2(){
+    document.getElementById('rdb2').checked = false;
+  }
+
+  function limpar(){
+    document.form1.elements[1].value = '';
+    document.form1.elements[2].value = '';
+    document.getElementById('comment').value = 'Escreva';
+    document.getElementById('rdb1').checked = true;
+  }
+</script>
+</body>
+</html>
